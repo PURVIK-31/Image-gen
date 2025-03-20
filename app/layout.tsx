@@ -1,43 +1,16 @@
+"use client";
+
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
 
-import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/providers";
-
-export const metadata: Metadata = {
-  title: "GEN IMAGE",
-  description: "Generate beautiful images using AI with text prompts",
-  metadataBase: new URL("https://gen-image.vercel.app"),
-  openGraph: {
-    title: "GEN IMAGE - AI Image Generator",
-    description: "Transform your ideas into stunning visuals with AI",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "GEN IMAGE - AI Image Generator",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "GEN IMAGE - AI Image Generator",
-    description: "Transform your ideas into stunning visuals with AI",
-    images: ["/og-image.jpg"],
-  },
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-  manifest: "/manifest.json",
-};
+// Move metadata to a separate metadata.ts file
+// since you can't use metadata with "use client"
 
 export default function RootLayout({
   children,
@@ -45,8 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning className={inter.className}>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
