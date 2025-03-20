@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # Add other environment variables as needed
+      # - DATABASE_URL=postgres://user:password@db:5432/dbname
+    # Uncomment the following lines if you need volumes
+    # volumes:
+    #   - ./uploads:/app/uploads
+    #   - ./config:/app/config
+
+  # Uncomment if you need a database
+  # db:
+  #   image: postgres:14-alpine
+  #   restart: unless-stopped
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   environment:
+  #     - POSTGRES_PASSWORD=password
+  #     - POSTGRES_USER=user
+  #     - POSTGRES_DB=dbname
+  #   ports:
+  #     - "5432:5432"
+# Uncomment if you defined the db service
+# volumes:
+#   postgres_data:

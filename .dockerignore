@@ -1,0 +1,42 @@
+# Node modules
+node_modules
+npm-debug.log
+
+# Build files
+dist
+build
+*.tsbuildinfo
+
+# Version control
+.git
+.gitignore
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# IDE files
+.idea
+.vscode
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+
+# Tests
+coverage
+.nyc_output
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Misc
+.DS_Store
+thumbs.db
