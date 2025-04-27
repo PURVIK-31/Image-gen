@@ -73,11 +73,6 @@ yarn dev
 5. Click "Generate Image" and wait for your creation
 6. Download or share your generated image
 
-## 📸 Screenshots
-
-![App Screenshot 1](https://github.com/PURVIK-31/Image-gen/raw/main/public/screenshot1.png)
-![App Screenshot 2](https://github.com/PURVIK-31/Image-gen/raw/main/public/screenshot2.png)
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
