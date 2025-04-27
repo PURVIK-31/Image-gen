@@ -102,5 +102,3 @@ Project Link: [https://github.com/PURVIK-31/Image-gen](https://github.com/PURVIK
 
 Developed with ❤️ by [PURVIK](https://github.com/PURVIK-31)
 ```
-
-This comprehensive README.md file provides all the necessary information about your GEN IMAGE project, including features, installation steps, usage instructions, and more. It's well-structured with emojis for visual enhancement and clearly outlines the project's capabilities.
